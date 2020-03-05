@@ -82,6 +82,7 @@ public class Multi_client_server {
 
             System.out.println("Creating a new Handler object to for the client" + i + " with ip: " + sock_adr);
 
+            //instanciacion de clase clientHandler
             ClientHandler mtch = new ClientHandler(socket, "client" + i, dis, dos);
 
             System.out.println("Adding client " + i + " to active client list");
@@ -98,10 +99,13 @@ public class Multi_client_server {
 
     }
 }
+//Herencia con la plabra extend. CLientHandler hereda de Thread
+
+//Abnstraccion se crea una clase
 class ClientHandler extends Thread{
-    private String name;
+    private String name; //encapsulacion private
     final DataInputStream dis;
-    final DataOutputStream dos;
+    final DataOutputStream dos; //atributos
     Socket socket;
     boolean isloggedin;
 
@@ -118,7 +122,7 @@ class ClientHandler extends Thread{
         return (this.name);
     }
 
-    public void run(){
+    public void run(){ //se sobrescribe el metodo run aplicando polimorfismo
 
         String message;
 
