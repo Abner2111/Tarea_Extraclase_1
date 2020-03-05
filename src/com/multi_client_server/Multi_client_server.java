@@ -22,7 +22,7 @@ public class Multi_client_server {
     static int i = 0;
 
     //Port to listen to
-    static int PORT = 1234;
+    static int PORT = 500;
 
     public static void main(String[] args) throws IOException {
         JFrame f = new JFrame("Send it!: SERVER"); //Crea instancia de JFrame
@@ -99,7 +99,6 @@ public class Multi_client_server {
     }
 }
 class ClientHandler extends Thread{
-    Scanner scn = new Scanner(System.in);
     private String name;
     final DataInputStream dis;
     final DataOutputStream dos;
